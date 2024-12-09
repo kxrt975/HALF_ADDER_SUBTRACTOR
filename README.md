@@ -20,8 +20,6 @@ Sum = A’B+AB’ =A ⊕ B Carry = AB
 
 ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/bd4a0b2c-cdbc-4184-ab08-81578f121e1f)
 
-![WhatsApp Image 2024-12-03 at 13 27 49_4b25e4c4](https://github.com/user-attachments/assets/fb02f314-f3b1-4602-a491-f95831825a30)
-
 
 Figure -01 HALF ADDER
 
@@ -33,9 +31,6 @@ Diff = A’B+AB’ =A ⊕ B
 Borrow = A’B
 
  ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/d76b099c-513f-4e7c-843a-e2fd028a531a)
-
- ![WhatsApp Image 2024-12-03 at 13 27 54_e23e9482](https://github.com/user-attachments/assets/af197e8f-e765-47d1-8a27-d678ad3eaa0c)
-
 
 Figure -02 HALF Subtractor
 
@@ -67,18 +62,37 @@ Figure -02 HALF Subtractor
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
+ module ha(a,b,sum,carry);
+ input a,b;
+ output sum,carry;
+ assign sum= (a ^ b);
+ assign carry= ( a & b);
+ endmodule
+ 
+ Half Subractor
+ module hs(a,b,difference,borrow);
+ input a,b;
+ output difference,borrow;
+ assign difference= (a ^ b);
+ assign borrow= ( ~a & b);
+ endmodule
+
 Developed by: R.karthik padmanaban
 RegisterNumber:24001743
 
 **RTL Schematic**
 
-![WhatsApp Image 2024-12-03 at 13 27 50_2b2067e5](https://github.com/user-attachments/assets/4732943b-519f-4994-bbe4-020803600ddc)
-![WhatsApp Image 2024-12-03 at 13 27 53_a479e391](https://github.com/user-attachments/assets/2bf4a632-55b6-4cf6-8002-24e86dc835d2)
+![Screenshot 2024-12-09 192117](https://github.com/user-attachments/assets/909424c3-d529-47d4-8ecc-27624949a2f3)
 
-
+![Screenshot 2024-12-09 192213](https://github.com/user-attachments/assets/7771b045-5e33-4db7-921c-91321e713f7f)
 
 
 **Output/TIMING Waveform**
+
+![Screenshot 2024-12-09 192323](https://github.com/user-attachments/assets/8c84f611-6fb6-4b07-968e-40f7e09954a0)
+
+![Screenshot 2024-12-09 192415](https://github.com/user-attachments/assets/b395f2da-1cc3-442e-9d4b-a240d32666ad)
+
 
 **Result:**
  Thus the given half adder and half subtractor fuctions are implemented and their operators are verified using Verilog programming
